@@ -1,4 +1,4 @@
-import { A, B, C, D, load, User } from "./module.js";
+import { A, B, C, D, load, User } from "./modules.js";
 import * as readline from "readline";
 
 load();
