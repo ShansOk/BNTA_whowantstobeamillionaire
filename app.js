@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { A, B, C, D, load, User } from "./module.js";
 import * as readline from "readline";
 
@@ -26,6 +25,4 @@ rl.question('Enter a number: ', function (x) {
       rl.close();
   });
 });
-=======
 // test comment
->>>>>>> ccf15e6994a601117805389f565dd90bbc976546
