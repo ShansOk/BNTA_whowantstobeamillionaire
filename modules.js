@@ -19,15 +19,19 @@ export function name(number) {
 export function age(number2) {
   console.log('Age: ', number2) ;
 }
-// Function to the start the game
-export function startGame() {
+export function ans(number3) {
+  console.log("Correct!", number3);
 }
-// Function to display question
-export function getQuestion() {
-}
-// Function to show options
-export function selectOption() { 
-}
-export function checkForWin() {
 
-}
+// // Function to the start the game
+// export function startGame() {
+// }
+// // Function to display question
+// export function getQuestion() {
+// }
+// // Function to show options
+// export function selectOption() { 
+// }
+// export function checkForWin() {
+
+// }
