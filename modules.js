@@ -1,29 +1,33 @@
 export function load() {
   console.log("Who Wants to be a Millionaire!")
 }
-export class User {
-  constructor(name, age) {
+export class gameMaster {
+  constructor(name) {
     this.name = name;
-    this.age = age;
-    
+       
     }
     getDetails(){
       return `
-      Name: ${this.name},
-      Age: ${this.age},
+      Game Master: ${this.name},
       `;
     }
 }
-export function A(number) {
+export function name(number) {
   // Insert code to do whatever with sum here.
-  console.log('A: ', number) ;
+  console.log('Name: ', number) ;
 }
-export function B(number2) {
-  console.log('B: ', number2) ;
+export function age(number2) {
+  console.log('Age: ', number2) ;
 }
-export function C(number3) {
-  console.log('C: ', number3) ;
+// Function to the start the game
+export function startGame() {
 }
-export function D(number4) {
-  console.log('D: ', number4) ;
+// Function to display question
+export function getQuestion() {
+}
+// Function to show options
+export function selectOption() { 
+}
+export function checkForWin() {
+
 }

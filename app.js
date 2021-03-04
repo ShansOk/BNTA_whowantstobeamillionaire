@@ -1,28 +1,30 @@
-import { A, B, C, D, load, User } from "./modules.js";
+import { name, age, load, gameMaster, startGame, getQuestion } from "./modules.js";
 import * as readline from "readline";
-
+// LOADING INFO
 load();
-const user = new User( "joe", 24, "yes@outlook.com");
+const user = new gameMaster( "Jeremy Clarkson");
 console.log(user);
 console.log(user.getDetails());
-
+// INPUT
 var rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 });
-
-rl.question('Enter a number: ', function (x) {
-  rl.question('Enter another number: ', function (y) {
-      var A_answer = parseFloat(x) + parseFloat(y);
-      var B_answer = parseFloat(x) - parseFloat(y);
-      var C_answer = parseFloat(x) * parseFloat(y);
-      var D_answer = parseFloat(x) / parseFloat(y);
-      A(A_answer)
-      B(B_answer)
-      C(C_answer)
-      D(D_answer)
+// enter name and age and shows
+rl.question('Enter your name: ', function (x) {
+  rl.question('Enter your age: ', function (y) {
+      var Name1 = x.toString();
+      var Age1 = parseFloat(y);
+      name(Name1)
+      age(Age1)
 
       rl.close();
   });
 });
 // test comment
+
+
+
+// display
+
+
