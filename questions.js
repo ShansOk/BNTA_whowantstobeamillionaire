@@ -151,11 +151,7 @@ export const questions = {
                         "150 km"
                     ],
                     "question": "What is the range of missile 'Akash'?"
-                }
-            ]
-        },
-        {
-            "questions": [
+                },
                 {
                     "question": "In the U.S., if it's not Daylight Saving Time, it's what?",
                     "content": [
@@ -305,11 +301,8 @@ export const questions = {
                         "1969"
                     ],
                     "question": "When did 19 NATO members and 11 'Partners for Peace' join hands for peace plan for Kosovo Crisis?"
-                }
-            ]
-        },
-        {
-            "questions": [
+                },
+           
                 {
                     "question": "An albino gorilla usually has what color fur?",
                     "content": [
@@ -459,11 +452,8 @@ export const questions = {
                         "Mahamana"
                     ],
                     "question": "Lal Bahadur Shastri is also known as"
-                }
-            ]
-        },
-        {
-            "questions": [
+                },
+          
                 {
                     "question": "Which of the following consumer goods is the Gerber Products Co. best known for?",
                     "content": [
@@ -613,11 +603,7 @@ export const questions = {
                         "Himachal Pradesh"
                     ],
                     "question": "Mahabaleshwar is located in"
-                }
-            ]
-        },
-        {
-            "questions": [
+                },
                 {
                     "question": "What kind of animal traditionally lives in a sty?",
                     "content": [
