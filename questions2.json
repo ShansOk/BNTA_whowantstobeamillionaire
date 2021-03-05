@@ -151,11 +151,7 @@
 		                "Pizza Hut"
 		            ],
 		            "correct" : 3
-		        }
-		    ]
-		},
-		{
-		    "questions" : [
+		        },
 		        {
 		            "question" : "In the U.S., if it's not Daylight Saving Time, it's what?",
 		            "content" : [
@@ -305,11 +301,7 @@
 		                "Hominidae"
 		            ],
 		            "correct" : 3
-		        }
-		    ]
-		},
-		{
-		    "questions" : [
+		        },
 		        {
 		            "question" : "An albino gorilla usually has what color fur?",
 		            "content" : [
@@ -459,11 +451,7 @@
 		                "France"
 		            ],
 		            "correct" : 0
-		        }
-		    ]
-		},
-		{
-		    "questions" : [
+		        },
 		        {
 		            "question" : "Which of the following consumer goods is the Gerber Products Co. best known for?",
 		            "content" : [
@@ -613,11 +601,7 @@
 		                "Geneva"
 		            ],
 		            "correct" : 1
-		        }
-		    ]
-		},
-		{
-		    "questions" : [
+		        },
 		        {
 		            "question" : "What kind of animal traditionally lives in a sty?",
 		            "content" : [
