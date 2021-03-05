@@ -1,5 +1,5 @@
 import { name, age, load, gameMaster } from "./modules.js";
-import * as readline from "readline";
+import * as readline_sync from "readline-sync";
 import { questions } from "./questions.js";
 // LOADING INFO
 
@@ -11,34 +11,44 @@ const winScore = 2;
 
 console.log(user);
 console.log(user.getDetails());
+startGame();
 // INPUT
-var rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
+
+// var rl = readline_sync.createInterface({
+//   input: process.stdin,
+//   output: process.stdout
+// });
+
+
 // enter name and age and shows
-rl.question('Enter your name: ', function (x) {
-  rl.question('Enter your age: ', function (y) {
-      var Name1 = x.toString();
-      var Age1 = parseFloat(y);
-      name(Name1)
-      age(Age1)
-    // if(18<=age && age <=80) return true;
-    //   else {
-    //   return false;
+// rl.question('Enter your name: ', function (x) {
+//   rl.question('Enter your age: ', function (y) {
+//       var Name1 = x.toString();
+//       var Age1 = parseFloat(y);
+//       name(Name1)
+//       age(Age1)
+//     // if(18<=age && age <=80) return true;
+//     //   else {
+//     //   return false;
              
-      startGame();
-      // gameState=1;
-      rl.close();
+//       startGame();
+//       // gameState=1;
+//       rl.close();
       
-    });
-  });
+//     });
+//   });
+
+
 
 function startGame() {
-    console.log("Game started!")
-    // if (gameState === 1) {
-    getQuestion();
-    
+    var name = readline_sync.question('What is your name? ');
+    // var age = readline_sync.question('How old are you? ');
+    if (readline_sync.keyInYN(`OK ${name}, are you ready to become a millionaire? Hit Y/N`)){
+      console.log("Let's begin!");
+      getQuestion();
+    } else {
+      console.log("Alright then, have a good day!");
+    }
 }
 
 function getQuestion() {
@@ -46,29 +56,29 @@ function getQuestion() {
     var randomNumber = Math.floor(Math.random() * arrlength);
     var randomQuestion = questions.games[0].questions[randomNumber];
 
-    console.log(randomQuestion.question);
-    for (let answer of randomQuestion.content) {
-        console.log(answer);
-    }
-
-    rl.question('Enter your Answer: ', function(answer) {
-        var myAnswer = parseFloat(answer);
-        ans(myAnswer);
-        rl.close();
-    });
-    checkAnswer(randomQuestion.correct);
+    let userInput = readline_sync.keyInSelect(randomQuestion.content, randomQuestion.question);
+    // console.log(randomQuestion.question);
+    // for (let i = 1; i <= randomQuestion.content.length; i++) {
+    //     console.log(i + " " + answer);
+    // }
+    console.log(userInput);
+    checkAnswer(userInput, randomQuestion.correct)
+    // rl.question('Hit the key for an answer, 1-4: ', function(answer) {
+    //     var myAnswer = parseInt(answer);
+    //     //ans(myAnswer);
+    //     checkAnswer(myAnswer,randomQuestion.correct);
+    // });
 }
-   
+
 
 function checkAnswer(userInput, correctAnswer) {
-    if(correctAnswer === userInput) {
+    if( (userInput) === correctAnswer) {
         console.log('Correct');
         userScore++;
     } else {
         console.log('Incorrect! Try again for your chance to win one million pounds');
         userScore=0;
     }
-    
     console.log(`Score is: ${userScore}`);
 }
 
