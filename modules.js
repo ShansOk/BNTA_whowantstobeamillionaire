@@ -12,6 +12,20 @@ export class gameMaster {
       `;
     }
 }
+
+export class UserPerson {
+  constructor(name) {
+    this.name = name;  
+    }
+    assignName(newUserName){
+    this.name = newUserName;
+    }
+
+    getName(){
+      return this.name;
+    }
+}
+
 export function name(number) {
   // Insert code to do whatever with sum here.
   console.log('Name: ', number) ;
